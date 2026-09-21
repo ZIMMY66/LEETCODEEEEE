@@ -8,15 +8,11 @@ class Solution {
 
             int mid = (low + high) / 2;
 
-            // Make mid even
             if (mid % 2 == 1)
                 mid--;
 
-            // Correct pair → single is on right
             if (nums[mid] == nums[mid + 1])
                 low = mid + 2;
-
-            // Wrong pair → single is on left
             else
                 high = mid;
         }
